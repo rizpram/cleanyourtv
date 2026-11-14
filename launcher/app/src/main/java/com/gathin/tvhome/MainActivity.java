@@ -459,6 +459,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ((SmartDashboard)findViewById(R.id.smartDashboard)).initialize();
         density = getResources().getDisplayMetrics().density;
         // config.xml, overlaid by config.json from a pushed theme (see Config and tools/theme.sh).
         Config cfg = Config.load(this);
@@ -1089,6 +1090,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     @Override
     protected void onResume() {
+        ((SmartDashboard)findViewById(R.id.smartDashboard)).onHostResume();
         super.onResume();
         resumed = true;
         // A festival that started or ended while Home was in the background: rebuild with or without it.
@@ -1334,6 +1336,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     @Override
     protected void onStop() {
+        ((SmartDashboard)findViewById(R.id.smartDashboard)).onHostStop();
         super.onStop();
         started = false;
         unregisterReceiver(timeReceiver);
