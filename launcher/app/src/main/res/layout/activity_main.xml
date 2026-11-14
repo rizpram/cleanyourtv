@@ -33,11 +33,11 @@
     <com.gathin.tvhome.SmartDashboard
         android:id="@+id/smartDashboard"
         android:layout_width="match_parent"
-        android:layout_height="125dp"
+        android:layout_height="110dp"
         android:layout_gravity="top"
         android:layout_marginStart="56dp"
         android:layout_marginEnd="56dp"
-        android:layout_marginTop="155dp" />
+        android:layout_marginTop="120dp" />
 
     <!-- Race-weekend panel (a theme's race_calendar, see RaceWeekend): in the free space under the clock,
          shown only from shortly before a weekend's first session until the race is over. Updated once a
